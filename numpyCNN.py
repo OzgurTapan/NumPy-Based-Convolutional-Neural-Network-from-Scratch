@@ -223,8 +223,8 @@ def load_weights(filepath, conv_layer, dense_layer):
 # =====================================================================
 if __name__ == "__main__":
     
-    X_train, y_train = load_dataset_from_directory("train")
-    X_test, y_test = load_dataset_from_directory("test")
+    X_train, y_train = load_dataset_from_directory("dataset/train")
+    X_test, y_test = load_dataset_from_directory("dataset/test")
     
     if X_train.size == 0 or X_test.size == 0:
         print("\nError: Training or testing data is missing.")
