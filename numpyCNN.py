@@ -70,7 +70,7 @@ def load_dataset_from_directory(base_dir):
 class Conv2D:
     def __init__(self, in_channels, out_channels, kernel_size):
         self.kernel_size = kernel_size
-        self.filters = np.random.randn(out_channels, kernel_size, kernel_size, in_channels) * np.sqrt(2.0 / np.sqr(kernel_size) * in_channels)
+        self.filters = np.random.randn(out_channels, kernel_size, kernel_size, in_channels) * np.sqrt(2.0 / (kernel_size**2 * in_channels))
         self.biases = np.zeros(out_channels)
         
     def forward(self, X):
